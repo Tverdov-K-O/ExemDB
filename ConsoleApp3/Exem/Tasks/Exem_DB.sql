@@ -47,7 +47,7 @@
 
 
 
---2.Товары по размерам
+--3.Товары по размерам
 --SELECT 
 --	Categories.Name AS [Категория],
 --	Poducts.Name AS [Продукт],
@@ -71,7 +71,7 @@
 --	Sizes.Name = N'L'
 
 
---3. Товары по качеству
+--4. Товары по качеству
 --SELECT 
 --	Categories.Name AS [Категория],
 --	Poducts.Name AS [Продукт],
@@ -93,3 +93,50 @@
 --	JOIN Genders ON Genders.Id = [Pivot].GenderId
 --WHERE
 --	Qualities.Name = N'Среднее'
+
+--5 Сформировать предложение - по одному товару (с наибольшим остатком) из рубрик - с заданым размером и цветом
+--SELECT 
+--	Categories.Name AS [Категория],
+--	Poducts.Name AS [Продукт],
+--	Vender.Name AS [Фирма],
+--	Colors.Name As [Цвет],
+--	Qualities.Name AS [Качество],
+--	Genders.Name AS [Пол],
+--	Sizes.Name AS [Размер],
+--	[Pivot].Count AS [Количество],
+--	[Pivot].Prise AS [Цена]
+--FROM
+--	Categories
+--	JOIN Poducts ON Poducts.CategoryId = Categories.Id
+--	JOIN Vender ON Vender.Id = Poducts.VenderId
+--	JOIN Qualities ON Qualities.Id = Poducts.QualityId
+--	JOIN [Pivot] ON [Pivot].ProductId = Poducts.Id
+--	JOIN Sizes ON [Pivot].SizeId = Sizes.Id
+--	JOIN Colors ON [Pivot].ColorId = Colors.Id
+--	JOIN Genders ON Genders.Id = [Pivot].GenderId
+--WHERE
+--	[Pivot].[Count] = (SELECT MAX([Pivot].Count) FROM [Pivot])
+--UNION
+--SELECT 
+--	Categories.Name AS [Категория],
+--	Poducts.Name AS [Продукт],
+--	Vender.Name AS [Фирма],
+--	Colors.Name As [Цвет],
+--	Qualities.Name AS [Качество],
+--	Genders.Name AS [Пол],
+--	Sizes.Name AS [Размер],
+--	[Pivot].Count AS [Количество],
+--	[Pivot].Prise AS [Цена]
+--FROM
+--	Categories
+--	JOIN Poducts ON Poducts.CategoryId = Categories.Id
+--	JOIN Vender ON Vender.Id = Poducts.VenderId
+--	JOIN Qualities ON Qualities.Id = Poducts.QualityId
+--	JOIN [Pivot] ON [Pivot].ProductId = Poducts.Id
+--	JOIN Sizes ON [Pivot].SizeId = Sizes.Id
+--	JOIN Colors ON [Pivot].ColorId = Colors.Id
+--	JOIN Genders ON Genders.Id = [Pivot].GenderId
+--WHERE
+--	Sizes.Name = 'XS' AND Colors.Name = 'Красный'
+
+	
