@@ -1,0 +1,95 @@
+﻿
+--1. Все товары
+--SELECT 
+--	Categories.Name AS [Категория],
+--	Poducts.Name AS [Продукт],
+--	Vender.Name AS [Фирма],
+--  Colors.Name As [Цвет],
+--	Qualities.Name AS [Качество],
+--	Genders.Name AS [Пол],
+--	Sizes.Name AS [Размер],
+--	[Pivot].Count AS [Количество],
+--	[Pivot].Prise AS [Цена]
+--FROM
+--	Categories
+--	JOIN Poducts ON Poducts.CategoryId = Categories.Id
+--	JOIN Vender ON Vender.Id = Poducts.VenderId
+--	JOIN Qualities ON Qualities.Id = Poducts.QualityId
+--	JOIN [Pivot] ON [Pivot].ProductId = Poducts.Id
+--	JOIN Sizes ON [Pivot].SizeId = Sizes.Id
+--	JOIN Colors ON [Pivot].ColorId = Colors.Id
+--	JOIN Genders ON Genders.Id = [Pivot].GenderId
+
+
+
+--2. Товары по цветам
+--SELECT 
+--	Categories.Name AS [Категория],
+--	Poducts.Name AS [Продукт],
+--	Vender.Name AS [Фирма],
+--	Colors.Name As [Цвет],
+--	Qualities.Name AS [Качество],
+--	Genders.Name AS [Пол],
+--	Sizes.Name AS [Размер],
+--	[Pivot].Count AS [Количество],
+--	[Pivot].Prise AS [Цена]
+--FROM
+--	Categories
+--	JOIN Poducts ON Poducts.CategoryId = Categories.Id
+--	JOIN Vender ON Vender.Id = Poducts.VenderId
+--	JOIN Qualities ON Qualities.Id = Poducts.QualityId
+--	JOIN [Pivot] ON [Pivot].ProductId = Poducts.Id
+--	JOIN Sizes ON [Pivot].SizeId = Sizes.Id
+--	JOIN Colors ON [Pivot].ColorId = Colors.Id
+--	JOIN Genders ON Genders.Id = [Pivot].GenderId
+--WHERE
+--	Colors.Name = N'Черный'
+
+
+
+--2.Товары по размерам
+--SELECT 
+--	Categories.Name AS [Категория],
+--	Poducts.Name AS [Продукт],
+--	Vender.Name AS [Фирма],
+--	Colors.Name As [Цвет],
+--	Qualities.Name AS [Качество],
+--	Genders.Name AS [Пол],
+--	Sizes.Name AS [Размер],
+--	[Pivot].Count AS [Количество],
+--	[Pivot].Prise AS [Цена]
+--FROM
+--	Categories
+--	JOIN Poducts ON Poducts.CategoryId = Categories.Id
+--	JOIN Vender ON Vender.Id = Poducts.VenderId
+--	JOIN Qualities ON Qualities.Id = Poducts.QualityId
+--	JOIN [Pivot] ON [Pivot].ProductId = Poducts.Id
+--	JOIN Sizes ON [Pivot].SizeId = Sizes.Id
+--	JOIN Colors ON [Pivot].ColorId = Colors.Id
+--	JOIN Genders ON Genders.Id = [Pivot].GenderId
+--WHERE
+--	Sizes.Name = N'L'
+
+
+--3. Товары по качеству
+--SELECT 
+--	Categories.Name AS [Категория],
+--	Poducts.Name AS [Продукт],
+--	Vender.Name AS [Фирма],
+--	Colors.Name As [Цвет],
+--	Qualities.Name AS [Качество],
+--	Genders.Name AS [Пол],
+--	Sizes.Name AS [Размер],
+--	[Pivot].Count AS [Количество],
+--	[Pivot].Prise AS [Цена]
+--FROM
+--	Categories
+--	JOIN Poducts ON Poducts.CategoryId = Categories.Id
+--	JOIN Vender ON Vender.Id = Poducts.VenderId
+--	JOIN Qualities ON Qualities.Id = Poducts.QualityId
+--	JOIN [Pivot] ON [Pivot].ProductId = Poducts.Id
+--	JOIN Sizes ON [Pivot].SizeId = Sizes.Id
+--	JOIN Colors ON [Pivot].ColorId = Colors.Id
+--	JOIN Genders ON Genders.Id = [Pivot].GenderId
+--WHERE
+--	Qualities.Name = N'Среднее'

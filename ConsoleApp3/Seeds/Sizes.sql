@@ -1,0 +1,6 @@
+﻿INSERT INTO [dbo].[Sizes] ([Id], [Name]) VALUES (N'e98374fb-3de5-4d2e-b0cf-1e12c6f38c13', N'S')
+INSERT INTO [dbo].[Sizes] ([Id], [Name]) VALUES (N'3ea0a8d0-3997-44d1-bebd-45ec85e7343e', N'XS')
+INSERT INTO [dbo].[Sizes] ([Id], [Name]) VALUES (N'9a46d8df-35d1-4564-b4af-8c88417e7f2f', N'XXL')
+INSERT INTO [dbo].[Sizes] ([Id], [Name]) VALUES (N'9182d778-ba17-413b-b15e-9976a2223ebb', N'L')
+INSERT INTO [dbo].[Sizes] ([Id], [Name]) VALUES (N'fc92395b-a7e4-4b10-943f-b2b6eaeb804f', N'XL')
+INSERT INTO [dbo].[Sizes] ([Id], [Name]) VALUES (N'6acf5821-44b8-47ef-bab9-f195331227b6', N'M')
