@@ -1,15 +1,22 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp3
+
+namespace WinForms_Auth
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
+
+            Console.ReadKey();
         }
     }
 }
